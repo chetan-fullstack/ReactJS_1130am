@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+
+    
+
+    <!-- Bootstrap CSS  -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+
+    <!-- Coustom CSS  -->
+
+    <style>
+        body{
+            background-color: brown;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container border border-3 border-black py-5 text-light bg-dark">
+        <h1 class="text-center pb-5 text-decoration-underline">Calculator</h1>
+
+      <div class="row">
+        <div class="col">
+          <label class="form-label"> First Number</label> <input type="number" id="first"  class="form-control"/>
+        </div>
+        <div class="col">
+          <label class="form-label"> Second Number</label> <input type="number" id="second" class="form-control" />
+        </div>
+      </div>
+
+      <br /><br /><br />
+
+      <div class="row">
+
+          
+          <div class="col d-flex justify-content-around">
+              <button class="btn btn-primary fs-2" onclick="add()">+</button>
+              <button class="btn btn-primary fs-2" onclick="sub()">-</button>
+              <button class="btn btn-primary fs-2" onclick="multiply()">*</button>
+              <button class="btn btn-primary fs-2" onclick="devision()">/</button>
+            </div>
+            
+            <div class="col border border-4 border-secondary-subtle">
+                <h2 id="dispdata"></h2>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- bootstrap Js  -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+
+
+    <!-- custom JS  -->
+
+    <script>
+      let first = document.getElementById("first");
+      let second = document.getElementById("second");
+
+      console.log(first, second);
+
+
+      function add() {
+        let result = parseFloat(first.value) + parseFloat(second.value) 
+        document.getElementById("dispdata").innerText = result
+      }
+      function sub() {
+        let result = parseFloat(first.value) - parseFloat(second.value) 
+        document.getElementById("dispdata").innerText = result
+      }
+      function multiply() {
+        let result = parseFloat(first.value) * parseFloat(second.value) 
+        document.getElementById("dispdata").innerText = result
+      }
+      function devision() {
+        let result = parseFloat(first.value) / parseFloat(second.value) 
+        document.getElementById("dispdata").innerText = result
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function in JS</title>
+  </head>
+  <body>
+    <h1>Function in JS</h1>
+
+    <script>
+      // Function in JS
+
+      // Function Declaration
+
+      function greet() {
+        console.log("Namaste Bharat");
+      }
+
+      // Function Calling
+
+      greet();
+
+      //   Function with Parameters and Araguments
+
+      // while declaraing a function we pass some Parameters in the parenthesis (param1, param2)
+
+      function addTwoNumber(a, b) {
+        let res = a + b;
+        console.log(res);
+      }
+
+      // while Calling a function we pass some Arguments in the parenthesis (arg1, arg2)
+
+      addTwoNumber(2, 5);
+
+      //   function return
+
+      //   function always return something
+
+      function greetMe() {
+        console.log("Good Morning");
+
+        return console.log("Good Afternoon");
+
+        console.log("Good Night");
+      }
+
+      greetMe();
+
+      // Function Expression
+
+      //   Anonymous Function
+
+      const greetings = function () {
+        console.log("Anonymous Function");
+      };
+      greetings()
+
+
+      //   Arrow Function
+
+      const greetArrow = () => {
+        console.log("Arrow Function");
+      };
+
+      greetArrow();
+    </script>
+  </body>
+</html>
